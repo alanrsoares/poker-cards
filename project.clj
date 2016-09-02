@@ -2,7 +2,7 @@
   :dependencies [[org.clojure/clojure        "1.8.0"]
                  [org.clojure/clojurescript  "1.9.89"]
                  [reagent "0.6.0-rc"]
-                 [binaryage/devtools "0.6.1"]
+                 [binaryage/devtools "0.8.1"]
                  [re-frame "0.8.0"]
                  [secretary "1.2.3"]
                  [compojure "1.5.0"]
@@ -31,8 +31,8 @@
 
     :plugins      [[lein-figwheel "0.5.4-3"]
                    [lein-doo "0.1.6"]
-                   [cider/cider-nrepl "0.13.0"]]
-    }}
+                   [cider/cider-nrepl "0.13.0"]]}}
+    
 
   :cljsbuild
   {:builds
@@ -57,8 +57,8 @@
      :source-paths ["src/cljs" "test/cljs"]
      :compiler     {:output-to     "resources/public/js/compiled/test.js"
                     :main          poker-cards.runner
-                    :optimizations :none}}
-    ]}
+                    :optimizations :none}}]}
+    
 
   :main poker-cards.server
 
@@ -66,5 +66,5 @@
 
   :uberjar-name "poker-cards.jar"
 
-  :prep-tasks [["cljsbuild" "once" "min"] "compile"]
-  )
+  :prep-tasks [["cljsbuild" "once" "min"] "compile"])
+  
