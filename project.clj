@@ -26,8 +26,7 @@
 
   :profiles
   {:dev
-   {:dependencies [
-                   [figwheel-sidecar "0.5.4-3"]
+   {:dependencies [[figwheel-sidecar "0.5.4-3"]
                    [com.cemerick/piggieback "0.2.1"]]
 
     :plugins      [[lein-figwheel "0.5.4-3"]
