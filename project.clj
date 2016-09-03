@@ -38,21 +38,21 @@
   {:builds
    [{:id           "dev"
      :source-paths ["src/cljs"]
-     :figwheel     {:on-jsload "poker-cards.core/mount-root"}
      :compiler     {:main                 poker-cards.core
                     :output-to            "resources/public/js/compiled/app.js"
                     :output-dir           "resources/public/js/compiled/out"
                     :asset-path           "js/compiled/out"
-                    :source-map-timestamp true}}
+                    :source-map-timestamp true}
+     :figwheel     {:on-jsload "poker-cards.core/mount-root"}}
 
     {:id           "min"
      :source-paths ["src/cljs"]
-     :jar true
      :compiler     {:main            poker-cards.core
                     :output-to       "resources/public/js/compiled/app.js"
                     :optimizations   :advanced
                     :closure-defines {goog.DEBUG false}
-                    :pretty-print    false}}
+                    :pretty-print    false}
+     :jar true}
     {:id           "test"
      :source-paths ["src/cljs" "test/cljs"]
      :compiler     {:output-to     "resources/public/js/compiled/test.js"
