@@ -23,4 +23,5 @@
   (routes/app-routes)
   (re-frame/dispatch-sync [:initialize-db])
   (dev-setup)
+  (println "foo")
   (mount-root))
